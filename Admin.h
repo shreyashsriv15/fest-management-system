@@ -1,6 +1,5 @@
-#include<iostream>
-#include<string>
-using namespace std;
+#ifndef ADMIN_H
+#define ADMIN_H
 
 class Admin
 {
@@ -17,3 +16,5 @@ class Admin
         void login(string user, string pass);
 
 };
+
+#endif
