@@ -1,21 +1,16 @@
-#include "Admin.h"
+#include"Admin.h"
+#include<iostream>
+#include<string>
 
-class Admin
-{
-private:
-    string username;
-    string password;
-               
-public:
 
     // default account
-    Admin()
+    Admin::Admin()
     {
         username = "admin";
         password = "1234";
     }
 
-    void createAccount()
+    void Admin::createAccount()
     {
         cout<<"Enter the username : "<<endl;
         cin>>username;
@@ -24,7 +19,7 @@ public:
         cin>>password;
     }
 
-    void login(string user ,string pass)
+    void Admin::login(string user ,string pass)
     {
         if(user == username && pass == password)
         {
@@ -35,4 +30,3 @@ public:
             cout<<"Invalid username or password"<<endl;
         }
     }
-};

@@ -1,5 +1,7 @@
 #ifndef ADMIN_H
 #define ADMIN_H
+using namespace std;
+#include <string>
 
 class Admin{
     private:
@@ -9,7 +11,7 @@ class Admin{
     public:
         //Constructor
         Admin();
-
+    
         //Member functions
         void createAccount();
         void login(string user, string pass);

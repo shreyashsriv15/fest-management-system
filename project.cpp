@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 #include "Admin.h"
 using namespace std;
 
@@ -25,4 +26,24 @@ int main()
 
         a1.login(user,pass);
     }
-}
+
+    else if(n==2)
+    {
+        string user , pass;
+
+        cout<<"Enter the username : "<<endl;
+        cin>>user;
+
+        cout<<"Enter the password : "<<endl;
+        cin>>pass;
+
+        a1.login(user,pass);
+    }
+
+    else
+    {
+        cout<<"Try again"<<endl;
+        
+    }
+    return 0;
+} 
