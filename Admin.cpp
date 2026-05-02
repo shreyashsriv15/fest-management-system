@@ -1,16 +1,16 @@
 #include"Admin.h"
 #include<iostream>
 #include<string>
+using namespace std;
 
-
-    // default account
-    Admin::Admin()
+    //Default Account
+    Admin :: Admin()
     {
         username = "admin";
         password = "1234";
     }
 
-    void Admin::createAccount()
+    void Admin :: createAccount()
     {
         cout<<"Enter the username : "<<endl;
         cin>>username;
@@ -19,7 +19,7 @@
         cin>>password;
     }
 
-    void Admin::login(string user ,string pass)
+    void Admin :: login(string user ,string pass)
     {
         if(user == username && pass == password)
         {
