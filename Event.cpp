@@ -1,15 +1,13 @@
-#include"Event.h"
-#include<iostream>
-#include<string>
+#include "Event.h"
+#include <iostream>
 using namespace std;
 
-Event :: Event()
+Event::Event()
 {
     count = 0;
 }
 
-// 1. Add Event
-void Event :: addEvent()
+void Event::addEvent()
 {
     if(count >= 50)
     {
@@ -35,17 +33,12 @@ void Event :: addEvent()
     winner[count] = "NotDeclared";
 
     count++;
-
     cout<<"Event Added Successfully\n";
 }
 
-
-// 2. Delete Event
-void Event :: deleteEvent()
+void Event::deleteEvent()
 {
     string name;
-    int found = 0;
-
     cout<<"Enter Event Name to delete: ";
     cin>>name;
 
@@ -62,26 +55,17 @@ void Event :: deleteEvent()
                 venue[j] = venue[j+1];
                 winner[j] = winner[j+1];
             }
-
             count--;
-            found = 1;
             cout<<"Event Deleted Successfully\n";
-            break;
+            return;
         }
     }
-
-    if(found == 0)
-    {
-        cout<<"Event not found\n";
-    }
+    cout<<"Event not found\n";
 }
 
-
-// 3. Update Date Time Venue
-void Event :: addSchedule()
+void Event::addSchedule()
 {
     string name;
-
     cout<<"Enter Event Name: ";
     cin>>name;
 
@@ -102,13 +86,10 @@ void Event :: addSchedule()
             return;
         }
     }
-
     cout<<"Event not found\n";
 }
 
-
-// 4. View Events
-void Event :: viewEvents()
+void Event::viewEvents()
 {
     if(count == 0)
     {
@@ -127,12 +108,9 @@ void Event :: viewEvents()
     }
 }
 
-
-// 5. Declare Winner
-void Event :: declareWinner()
+void Event::declareWinner()
 {
     string name;
-
     cout<<"Enter Event Name: ";
     cin>>name;
 
@@ -142,18 +120,14 @@ void Event :: declareWinner()
         {
             cout<<"Enter Winner Name: ";
             cin>>winner[i];
-
             cout<<"Winner Declared Successfully\n";
             return;
         }
     }
-
     cout<<"Event not found\n";
 }
 
-
-// 6. Generate Report
-void Event :: generateReport()
+void Event::generateReport()
 {
     cout<<"\n------ Event Report ------\n";
 
@@ -167,18 +141,12 @@ void Event :: generateReport()
     }
 }
 
-
-// 7. Search Event
-void Event :: searchEvent()
+void Event::searchEvent()
 {
     int choice;
     string key;
 
-    cout<<"Search By\n";
-    cout<<"1. Event Name\n";
-    cout<<"2. Date\n";
-    cout<<"3. Organiser\n";
-
+    cout<<"Search By\n1.Event Name\n2.Date\n3.Organiser\n";
     cin>>choice;
 
     cout<<"Enter value: ";
@@ -196,20 +164,15 @@ void Event :: searchEvent()
             cout<<"\nTime       : "<<time[i];
             cout<<"\nVenue      : "<<venue[i];
             cout<<"\nWinner     : "<<winner[i]<<endl;
-
             return;
         }
     }
-
     cout<<"Event not found\n";
 }
 
-
-// 8. Organiser Details
-void Event :: organiserDetails()
+void Event::organiserDetails()
 {
     string name;
-
     cout<<"Enter Event Name: ";
     cin>>name;
 
@@ -221,6 +184,5 @@ void Event :: organiserDetails()
             return;
         }
     }
-
     cout<<"Event not found\n";
 }
