@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Event.h"
 #include "participants.h"
 #include "Admin.h"
 using namespace std;
+
 int main()
 {
     Admin a1;
@@ -24,9 +24,8 @@ int main()
         cout<<"Enter the password again : "<<endl;
         cin>>pass;
 
-        a1.login(user,pass);
+        a1.login(user, pass);
     }
-
     else if(n==2)
     {
         string user , pass;
@@ -37,16 +36,15 @@ int main()
         cout<<"Enter the password : "<<endl;
         cin>>pass;
 
-        a1.login(user,pass);
+        a1.login(user, pass);
     }
-
     else
     {
         cout<<"Try again"<<endl;
         return 0;
     }
 
-    Participants p;   // using derived class
+    Participants p;
 
     int choice;
 
@@ -78,23 +76,29 @@ int main()
 
         switch(choice)
         {
+            // 🔹 Event functions (inherited)
             case 1: p.addEvent(); break;
             case 2: p.deleteEvent(); break;
             case 3: p.addSchedule(); break;
-            case 4: p.viewEvents(); break;
+            case 4: p.viewEvents(); break;       // overridden → polymorphism works
             case 5: p.declareWinner(); break;
-            case 6: p.generateReport(); break;
+            case 6: p.generateReport(); break;   // overridden
             case 7: p.searchEvent(); break;
             case 8: p.organiserDetails(); break;
 
+            // 🔹 Participant functions
             case 9: p.setMaxParticipants(); break;
             case 10: p.addParticipant(); break;
             case 11: p.deleteParticipant(); break;
             case 12: p.viewParticipants(); break;
             case 13: p.shortlistParticipants(); break;
+
+            case 14: cout<<"Exiting...\n"; break;
+
+            default: cout<<"Invalid choice\n";
         }
 
-    }while(choice != 14);
+    } while(choice != 14);
 
     return 0;
 }
