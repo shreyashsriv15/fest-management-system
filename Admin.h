@@ -8,10 +8,10 @@ class Admin
         string password;
 
     public:
-        //Constructor
+        
         Admin();
 
-        //Member Functions
+       
         void createAccount();
         void login(string user, string pass);
 
