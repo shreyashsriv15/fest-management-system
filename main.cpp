@@ -76,17 +76,17 @@ int main()
 
         switch(choice)
         {
-            // 🔹 Event functions (inherited)
+            
             case 1: p.addEvent(); break;
             case 2: p.deleteEvent(); break;
             case 3: p.addSchedule(); break;
-            case 4: p.viewEvents(); break;       // overridden → polymorphism works
+            case 4: p.viewEvents(); break;       
             case 5: p.declareWinner(); break;
-            case 6: p.generateReport(); break;   // overridden
+            case 6: p.generateReport(); break;   
             case 7: p.searchEvent(); break;
             case 8: p.organiserDetails(); break;
 
-            // 🔹 Participant functions
+            
             case 9: p.setMaxParticipants(); break;
             case 10: p.addParticipant(); break;
             case 11: p.deleteParticipant(); break;
