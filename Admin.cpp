@@ -28,5 +28,6 @@ using namespace std;
         else
         {
             cout<<"Invalid username or password"<<endl;
+            exit(0);
         }
     }
